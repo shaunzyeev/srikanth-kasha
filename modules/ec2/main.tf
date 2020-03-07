@@ -6,12 +6,12 @@ locals {
 }
 
 resource "aws_instance" "this" {
-  count = var.instance_count
-  ami              = var.ami
-  instance_type    = var.instance_type
+  count         = var.instance_count
+  ami           = var.ami
+  instance_type = var.instance_type
   # user_data        = var.user_data
   # user_data_base64 = var.user_data_base64
-  subnet_id = var.subnet_id
+  subnet_id              = var.subnet_id
   key_name               = var.key_name
   monitoring             = var.monitoring
   get_password_data      = var.get_password_data

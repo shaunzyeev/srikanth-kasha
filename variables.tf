@@ -1,6 +1,6 @@
 variable "region" {
   description = "Enter the regions to launch ec2"
-  default = "us-east-1"
+  default     = "us-east-1"
 }
 
 variable "name" {
