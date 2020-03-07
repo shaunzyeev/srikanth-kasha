@@ -4,16 +4,15 @@ provider "aws" {
 
 
 module "ec2_cluster" {
-  source                 = "./modules/ec2"
+  source = "./modules/ec2"
 
   name                   = var.name
   instance_count         = var.instance_count
-
   ami                    = var.ami
   instance_type          = var.instance_type
   key_name               = var.key_name
   monitoring             = true
-  vpc_security_group_ids = ["sg-12345678"]
+  vpc_security_group_ids = var.vpc_security_group_ids
   subnet_id              = var.subnet_id
 
   tags = {
